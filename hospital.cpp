@@ -1,7 +1,8 @@
 #include "hospital.h"
+#include <unistd.h>
 using namespace std;
 
-void createH(vector<vector<loc>> &region) // creates a hospital region
+void createH(vector<vector<loc> > &region) // creates a hospital region
 {
 	for (int i = 0; i < region.size() ; i++)
 	{
@@ -20,7 +21,7 @@ void createH(vector<vector<loc>> &region) // creates a hospital region
 }
 
 
-void distribute(vector <vector<loc>>& region, int inj)// distributes the sick population to cells
+void distribute(vector <vector<loc> >& region, int inj)// distributes the sick population to cells
 {
 	int temp = inj;
 	do
@@ -53,7 +54,7 @@ void distribute(vector <vector<loc>>& region, int inj)// distributes the sick po
 
 
 
-void simulateH(vector<vector<loc>>& region, int& goods)// transfers the sick population to hospitals evenly
+void simulateH(vector<vector<loc> >& region, int& goods)// transfers the sick population to hospitals evenly
 {
 	int total_sick = 0;// sick people in residential area
 	int inH = 0;// sick people in hospital
@@ -124,7 +125,7 @@ void simulateH(vector<vector<loc>>& region, int& goods)// transfers the sick pop
 	} while (total_sick > 0);
 }
 
-int findGoods(vector<vector<loc>> region) // to find the number of goods available in the commercial area.
+int findGoods(vector<vector<loc> > region) // to find the number of goods available in the commercial area.
 {
 	int goods = 0;
 	for (int i = 0; i < region.size(); i++) // putting the sick people in hospital
@@ -140,7 +141,7 @@ int findGoods(vector<vector<loc>> region) // to find the number of goods availab
 	return goods;
 }
 
-void treat(vector<vector<loc>>& region)// treating the patients
+void treat(vector<vector<loc> >& region)// treating the patients
 {
 	int count = 0;// varibales to keep track of the changes
 	int medicalEquipment = 0;
@@ -202,13 +203,13 @@ void treat(vector<vector<loc>>& region)// treating the patients
 	
 }
 
-bool check(vector<vector<loc>>& region) // checking the previous region and current layout
+bool check(vector<vector<loc> >& region) // checking the previous region and current layout
 {
 	cout << "Waiting for goods";
 	for (int i = 0; i < 5; i++)// displaying the message
 	{
 		cout << ".";
-		Sleep(250);
+		sleep(250);
 	}
 	cout << endl;
 
