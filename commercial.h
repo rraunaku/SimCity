@@ -5,5 +5,5 @@
 #include "residential.h"
 using namespace std;
 
-void updateCommercial(vector<vector<loc>>& region, int& workers, int& goods);
+void updateCommercial(vector<vector<loc> >& region, int& workers, int& goods);
 #endif
