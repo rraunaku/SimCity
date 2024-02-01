@@ -64,9 +64,7 @@ void monster_attack_stop(vector<vector<loc> >& region, int& hero_xcoordinate, in
         }
     }
 }
-// Function for checking if the hero is adjacent to the residential region
 
-// ! Error in adjacency
 bool residential_adjacent_hero(vector<vector<loc> >& region, int i, int j) { // Checking if the hero is adjacent to the residential area
     vector<loc> x = isAdj(region, i, j);
     int number_of_rows = region.size();
@@ -80,27 +78,7 @@ bool residential_adjacent_hero(vector<vector<loc> >& region, int i, int j) { // 
     }
 
     return false;
-
-    // if(i > 0 && region[i - 1][j].regionType == 'R'){
-    //     return true;
-    // }
-
-    // if(i < number_of_rows - 1 && region[i + 1][j].regionType == 'R'){
-    //     return true;
-    // }
-
-    // if(j > 0 && region[i][j - 1].regionType == 'R'){
-    //     return true;
-    // }
-
-    // if(j < number_of_column - 1 && region[i][j + 1].regionType == 'R'){
-    //     return true;
-    // }
-
-    // return false;
 }
-
-// ! Error in adjacency
 
 bool hero_death(const bool& death) { // Checking the status of the hero
     return death;
