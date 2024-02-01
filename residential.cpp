@@ -2,7 +2,7 @@
 using namespace std;
 
 
-vector<loc> isAdj(vector<vector<loc>> region, int i, int j) { // return all the adjancent location of the region of gib=ven coordinates
+vector<loc> isAdj(vector<vector<loc> > region, int i, int j) { // return all the adjancent location of the region of gib=ven coordinates
 	vector<loc> temp;
 	if (j + 1 < region.size() && i <region.size())
 	{
@@ -41,7 +41,7 @@ vector<loc> isAdj(vector<vector<loc>> region, int i, int j) { // return all the 
 
 
 
-bool findRegionType(char type, vector<vector<loc>> region, int x, int y) // checks if the adjacent list contains the given character and return a value
+bool findRegionType(char type, vector<vector<loc> > region, int x, int y) // checks if the adjacent list contains the given character and return a value
 {
 	bool dec = false; // sets the default value
 	vector<loc> temp = isAdj(region, x, y); // creates a adjacent list
@@ -59,7 +59,7 @@ bool findRegionType(char type, vector<vector<loc>> region, int x, int y) // chec
 
 
 
-void updateRes(vector<vector<loc>> &region, int &workers)// updating the residential region
+void updateRes(vector<vector<loc> > &region, int &workers)// updating the residential region
 {
 	for (int i = 0; i < region.size(); i++)// goes through every storeed location
 	{
