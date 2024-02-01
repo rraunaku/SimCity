@@ -13,9 +13,9 @@
 #include "hospital.h"
 using namespace std;
 
-void readInput(string layout, vector<vector<loc>>& region);
-void update(vector <vector<loc>>& region, int& workers, int& goods, bool& same);
-void print(vector<vector<loc>> region);
+void readInput(string layout, vector<vector<loc> >& region);
+void update(vector <vector<loc> >& region, int& workers, int& goods, bool& same);
+void print(vector<vector<loc> > region);
 
 
 #endif // !READCSV_H
