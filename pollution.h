@@ -6,8 +6,8 @@
 #include "industrial.h"
 using namespace std;
 
-void pMapInitialize(vector<vector<loc>> region, vector<vector<loc>>& pMap);
-void printPol(vector <vector<loc>> map);
+void pMapInitialize(vector<vector<loc> > region, vector<vector<loc> >& pMap);
+void printPol(vector <vector<loc> > map);
 
 
 #endif
