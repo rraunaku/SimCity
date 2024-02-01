@@ -31,7 +31,7 @@ void readInput(string layout, vector<vector<loc> > &region) //function to read t
 
 
 
-void print(vector<vector<loc>> region) // printing the region
+void print(vector<vector<loc> > region) // printing the region
 {
     int pop = 0;
 	for (int i = 0; i < region.size(); i++)// loop to acces every variable 
@@ -75,7 +75,7 @@ void print(vector<vector<loc>> region) // printing the region
 		cout << endl;
 	}
 }
-bool change(vector <vector<loc>> region, vector<vector<loc>> initial) // checks the difference between the previous and current region
+bool change(vector <vector<loc> > region, vector<vector<loc> > initial) // checks the difference between the previous and current region
 {
 	for (int i = 0; i < region.size(); i++) {
 		for (int j = 0; j < region[i].size(); j++) {
@@ -89,9 +89,9 @@ bool change(vector <vector<loc>> region, vector<vector<loc>> initial) // checks 
 	return false;
 }
 
-void update(vector<vector<loc>> &region, int &workers, int&goods, bool &same) // updating the region
+void update(vector<vector<loc> > &region, int &workers, int&goods, bool &same) // updating the region
 {
-	vector <vector<loc>> initial = region;
+	vector <vector<loc> > initial = region;
 	updateRes(region, workers);
 	updateIndustrial(region, workers, goods);
 	updateCommercial(region, workers, goods);
