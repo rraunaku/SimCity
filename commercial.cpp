@@ -3,7 +3,7 @@ using namespace std;
 
 
 
-void updateCommercial(vector<vector<loc>>& region, int& workers, int& goods) {
+void updateCommercial(vector<vector<loc> >& region, int& workers, int& goods) {
 
     for (int i = 0; i < region.size(); i++) { // goes through all the location in the region
         for (int y = 0; y < region[i].size(); y++) {
