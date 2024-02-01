@@ -6,14 +6,13 @@
 #include "residential.h"
 #include "industrial.h"
 #include "chernobyl.h"
-#include "monster.h"
 #include "hospital.h"
 #include "hero.h"
 using namespace std;
 
 int main()
 {
-	vector<vector<loc>> region;
+	vector<vector<loc> > region;
 	string regionLayout;// initializing the variable to store region file
 	string tline;// temp file to slice the string and store the necessary data
 	int timeLimit = 0;// initializing the variable to store the time limit
@@ -75,33 +74,6 @@ int main()
 	cout << "Final State:" << endl;
 	print(region);// prints out the final layout
 	cout << endl;
-
-
-
-
-	//int hero_xcoordinate = 0;
-	//int hero_ycoordinate = 0;
-
-	//bool same = false; // boolean value to indicate if the region is same for thr two time step
-	//int i;
-	//for (i = 1; i < timeLimit; i++) {
-	//	move_towards_monster(region, hero_xcoordinate, hero_ycoordinate);
-	//	monster_attack_stop(region, hero_xcoordinate, hero_ycoordinate, death_of_monster, death);
-	//	update(region, workers, goods, same); // update the region file
-	//	cout << "STATE: " << i << endl;
-	//	print(region);// prints the current time step
-	//	cout << "Available Workers: " << workers << endl;// displays available workers
-	//	cout << "Available Goods: " << goods << endl << endl;// displays available goods
-	//	happiness_increase(region, death, death_of_monster);
-	//	population_decrease(region, death);
-
-	//	if (same == true) // runs if the region is the same for two loops
-	//	{
-	//		cout << "No change." << endl;
-	//		break;
-	//	}
-	//}
-
 
 	int inj = 0;
 	game(region, inj);
