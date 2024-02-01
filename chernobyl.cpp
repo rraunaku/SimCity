@@ -69,7 +69,7 @@ cout<<"Oh No! the radiation is spreading down to the area below! \n";
 			region[r][c].regionType='r'; 
 			region[r][c].population=0;
 			printt(region);
-			Sleep(5);
+			sleep(5);
 			cout << endl;
 		}
 	}
