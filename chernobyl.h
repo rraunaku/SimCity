@@ -6,6 +6,7 @@
 #include <cstdlib>
 #include <iostream>
 #include <string>
+#include<unistd.h>
 void game(vector<vector<loc> >& region, int& sick);
 void printt(vector<vector<loc> >& region);
 #endif
